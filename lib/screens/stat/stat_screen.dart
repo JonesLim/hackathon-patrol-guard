@@ -42,7 +42,7 @@ class _StatScreenState extends State<StatScreen> {
             ],
           ),
         ),
-         leading: IconButton(
+        leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.push(
@@ -82,26 +82,19 @@ class _StatScreenState extends State<StatScreen> {
               ),
             ),
             const SizedBox(height: 16),
-
             const Padding(
               padding: EdgeInsets.fromLTRB(100, 50, 0, 0),
               child: Column(
                 children: [
                   Indicator(
                     color: Colors.green,
-                    text: 'Complete Task',
+                    text: 'Complete Area',
                     isSquare: true,
                   ),
                   SizedBox(height: 8),
                   Indicator(
                     color: Colors.blue,
-                    text: 'Pending tasks',
-                    isSquare: true,
-                  ),
-                  SizedBox(height: 8),
-                  Indicator(
-                    color: Colors.grey,
-                    text: 'In Progress',
+                    text: 'Pending Area',
                     isSquare: true,
                   ),
                 ],
@@ -114,7 +107,7 @@ class _StatScreenState extends State<StatScreen> {
   }
 
   List<PieChartSectionData> showingSections() {
-    return List.generate(3, (i) {
+    return List.generate(2, (i) {
       final isTouched = i == touchedIndex;
       final double fontSize = isTouched ? 25.0 : 16.0;
       final double radius = isTouched ? 60.0 : 50.0;
@@ -137,21 +130,8 @@ class _StatScreenState extends State<StatScreen> {
         case 1:
           return PieChartSectionData(
             color: Colors.blue,
-            value: 10,
-            title: '10%',
-            radius: radius,
-            titleStyle: TextStyle(
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              shadows: shadows,
-            ),
-          );
-        case 2:
-          return PieChartSectionData(
-            color: Colors.grey,
-            value: 30,
-            title: '30%',
+            value: 40,
+            title: '40%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
@@ -166,7 +146,6 @@ class _StatScreenState extends State<StatScreen> {
     });
   }
 }
-
 
 class Indicator extends StatelessWidget {
   final Color color;
