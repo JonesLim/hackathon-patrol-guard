@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/screens/authentication/signin_screen.dart';
-import 'package:hackathon/screens/patrol/patrol_screen.dart';
 
 void main() {
   runApp(const MyApp());

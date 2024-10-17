@@ -182,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 50.0),
               const Text(
-                'File: screenshot.png',
+                'File: video.mov',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.black,
